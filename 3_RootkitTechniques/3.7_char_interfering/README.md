@@ -19,3 +19,7 @@ To use:
 * Unload with `rmmod rootkit`
 
 ![random](./random.png "Interfering with char devices")
+
+Additionally, since the linux kernel commits torvalds/linux@22b0a22 and torvalds/linux@1b388e7 the `function_operations` read and write fields have changed to `read_iter` and `write_iter`, respectively. In th interest of maintaining a working example, there is an updated module, `rootkit_updated` that patches the `get_random_bytes_user` function underlying the read calls to both char devices.
+
+![random_updated](./random_updated.png "Returning 0x00 for every byte read")
