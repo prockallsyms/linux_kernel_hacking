@@ -10,7 +10,7 @@
 #include "ftrace_helper.h"
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("m3ta");
+MODULE_AUTHOR("TheXcellerator-&-m3ta");
 MODULE_DESCRIPTION("get_random_bytes_user hook");
 MODULE_VERSION("0.0.1");
 
