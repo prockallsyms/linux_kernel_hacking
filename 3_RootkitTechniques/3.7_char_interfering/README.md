@@ -20,6 +20,6 @@ To use:
 
 ![random](./random.png "Interfering with char devices")
 
-Additionally, since the linux kernel commits torvalds/linux@22b0a22 and torvalds/linux@1b388e7 the `function_operations` read and write fields have changed to `read_iter` and `write_iter`, respectively. In th interest of maintaining a working example, there is an updated module, `rootkit_updated` that patches the `get_random_bytes_user` function underlying the read calls to both char devices.
+Additionally, since the linux kernel commits [torvalds/linux@22b0a22](https://github.com/torvalds/linux/commit/22b0a222af4df8ee9bb8e07013ab44da9511b047) and [torvalds/linux@1b388e7](https://github.com/torvalds/linux/commit/1b388e7765f2eaa137cf5d92b47ef5925ad83ced) the `function_operations` read and write fields have changed to `read_iter` and `write_iter`, respectively. In th interest of maintaining a working example, there is an updated module, `rootkit_updated` that patches the `get_random_bytes_user` function underlying the read calls to both char devices.
 
 ![random_updated](./random_updated.png "Returning 0x00 for every byte read")
